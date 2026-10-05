@@ -1,0 +1,101 @@
+/* 哔哩哔哩总时长统计面板样式 */
+.bilibili-total-time-panel {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 220px;
+    background: linear-gradient(135deg, #00a1d6 0%, #0084b4 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 161, 214, 0.4);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    z-index: 999999;
+    overflow: hidden;
+    animation: btt-slide-in 0.3s ease-out;
+}
+
+@keyframes btt-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btt-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btt-close {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+    font-size: 12px;
+}
+
+.btt-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btt-content {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.btt-total-time {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btt-detail {
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.btt-refresh {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btt-refresh:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 拖拽时的样式 */
+.bilibili-total-time-panel.dragging {
+    opacity: 0.8;
+    cursor: move;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    .bilibili-total-time-panel {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+}

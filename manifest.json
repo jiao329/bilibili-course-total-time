@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "哔哩哔哩课程总时长统计",
+  "version": "1.0.0",
+  "description": "统计哔哩哔哩课程页面中所有视频的总时长",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.bilibili.com/cheese/play/*",
+        "*://www.bilibili.com/medialist/play/*",
+        "*://www.bilibili.com/list/*",
+        "*://www.bilibili.com/video/BV*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

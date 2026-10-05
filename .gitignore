@@ -1,0 +1,19 @@
+# 操作系统 / 编辑器
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.code-workspace
+
+# 扩展打包产物（含私钥，切勿提交）
+*.crx
+*.pem
+*.zip
+
+# 依赖与日志（当前项目无构建步骤，此处为预留）
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
